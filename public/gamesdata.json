@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1",
+    "title": "PUBG: BATTLEGROUNDS",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/578080/header.jpg",
+    "category": "FPS",
+    "downloadLink": "https://store.steampowered.com/app/578080/",
+    "description": "Tactical battle royale with realistic gunplay and huge maps.",
+    "ratings": "4.5",
+    "developer": "KRAFTON, Inc."
+  },
+  {
+    "id": "2",
+    "title": "Hades",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/1145360/header.jpg",
+    "category": "Roguelike",
+    "downloadLink": "https://store.steampowered.com/app/1145360/",
+    "description": "Battle out of the Underworld in a fast, god-like action roguelike.",
+    "ratings": "4.8",
+    "developer": "Supergiant Games"
+  },
+  {
+    "id": "3",
+    "title": "Celeste",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/504230/header.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://store.steampowered.com/app/504230/",
+    "description": "Climb a mountain of precision platforming and heartfelt story.",
+    "ratings": "4.9",
+    "developer": "Maddy Makes Games"
+  },
+  {
+    "id": "4",
+    "title": "Hollow Knight",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/367520/header.jpg",
+    "category": "Metroidvania",
+    "downloadLink": "https://store.steampowered.com/app/367520/",
+    "description": "Explore a vast hand-drawn kingdom of insects and heroes.",
+    "ratings": "4.8",
+    "developer": "Team Cherry"
+  },
+  {
+    "id": "5",
+    "title": "Stardew Valley",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/413150/header.jpg",
+    "category": "Simulation",
+    "downloadLink": "https://store.steampowered.com/app/413150/",
+    "description": "Build a thriving farm, forge friendships, and relax.",
+    "ratings": "4.7",
+    "developer": "ConcernedApe"
+  },
+  {
+    "id": "6",
+    "title": "Dead Cells",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/588650/header.jpg",
+    "category": "Roguelite",
+    "downloadLink": "https://store.steampowered.com/app/588650/",
+    "description": "Roguelite action-platformer with tight combat and permadeath runs.",
+    "ratings": "4.6",
+    "developer": "Motion Twin"
+  },
+  {
+    "id": "7",
+    "title": "Ori and the Blind Forest: Definitive Edition",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/387290/header.jpg",
+    "category": "Adventure",
+    "downloadLink": "https://store.steampowered.com/app/387290/",
+    "description": "A stunning action-platformer about love, sacrifice, and hope.",
+    "ratings": "4.7",
+    "developer": "Moon Studios"
+  },
+  {
+    "id": "8",
+    "title": "Undertale",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/391540/header.jpg",
+    "category": "RPG",
+    "downloadLink": "https://store.steampowered.com/app/391540/",
+    "description": "Your choices matter in this quirky, heartfelt RPG.",
+    "ratings": "4.6",
+    "developer": "tobyfox"
+  },
+  {
+    "id": "9",
+    "title": "Cuphead",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/268910/header.jpg",
+    "category": "Run & Gun",
+    "downloadLink": "https://store.steampowered.com/app/268910/",
+    "description": "1930s cartoon chaos with brutal boss fights.",
+    "ratings": "4.5",
+    "developer": "Studio MDHR"
+  },
+  {
+    "id": "10",
+    "title": "Hyper Light Drifter",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/257850/header.jpg",
+    "category": "Action RPG",
+    "downloadLink": "https://store.steampowered.com/app/257850/",
+    "description": "Explore a ruined, neon world with razor-sharp combat.",
+    "ratings": "4.4",
+    "developer": "Heart Machine"
+  },
+  {
+    "id": "11",
+    "title": "INSIDE",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/304430/header.jpg",
+    "category": "Puzzle-Platformer",
+    "downloadLink": "https://store.steampowered.com/app/304430/",
+    "description": "A dark, narrative platformer of eerie puzzles and atmosphere.",
+    "ratings": "4.6",
+    "developer": "Playdead"
+  },
+  {
+    "id": "12",
+    "title": "The Witness",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/210970/header.jpg",
+    "category": "Puzzle",
+    "downloadLink": "https://store.steampowered.com/app/210970/",
+    "description": "Open-world puzzle island with hundreds of clever challenges.",
+    "ratings": "4.3",
+    "developer": "Thekla, Inc."
+  },
+  {
+    "id": "13",
+    "title": "Forza Horizon 5",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/1551360/header.jpg",
+    "category": "Racing",
+    "downloadLink": "https://store.steampowered.com/app/1551360/",
+    "description": "A vibrant open-world driving adventure across Mexico.",
+    "ratings": "4.6",
+    "developer": "Playground Games"
+  },
+  {
+    "id": "14",
+    "title": "Apex Legends",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/1172470/header.jpg",
+    "category": "FPS",
+    "downloadLink": "https://store.steampowered.com/app/1172470/",
+    "description": "Hero shooter battle royale with squads and abilities.",
+    "ratings": "4.4",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "15",
+    "title": "Spiritfarer",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/steam/apps/972660/header.jpg",
+    "category": "Management",
+    "downloadLink": "https://store.steampowered.com/app/972660/",
+    "description": "A cozy management game about caring for spirits and letting go.",
+    "ratings": "4.5",
+    "developer": "Thunder Lotus Games"
+  }
+]

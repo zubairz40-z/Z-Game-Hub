@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+*{
+  font-family: "Russo One", sans-serif;
+
+  
+  
+}
