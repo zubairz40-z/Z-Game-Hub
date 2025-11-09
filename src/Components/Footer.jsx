@@ -3,7 +3,7 @@ import { GiGameConsole } from "react-icons/gi";
 
 const Footer =()=>{
     return(
-        <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+        <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-8">
   <aside>
     <div className="space-y-5">
       <GiGameConsole size={100}  />
