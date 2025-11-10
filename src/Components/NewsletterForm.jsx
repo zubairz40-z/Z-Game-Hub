@@ -43,7 +43,7 @@ const NewsletterForm = () => {
   const isDisabled = status === "sending";
 
   return (
-    <div className="rounded-2xl bg-white p-6 shadow-sm">
+    <div className="rounded-2xl bg-blue-200 p-6 shadow-sm">
       <h3 className="text-2xl font-bold">Get indie drops in your inbox</h3>
       <p className="text-gray-600 mt-1">
         New releases, dev spotlights, and curated picks — weekly.

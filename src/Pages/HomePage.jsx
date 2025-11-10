@@ -30,7 +30,7 @@ const HomePage=()=>{
         )}
       </section>
 
-            <NewsletterForm></NewsletterForm>
+            <NewsletterForm ></NewsletterForm>
         </div>
     )
 }
