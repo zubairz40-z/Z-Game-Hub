@@ -1,13 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from 'react-router';
 import { FcGoogle } from "react-icons/fc";
+import { auth, googleProvider } from "../Firebase/Firebase.config";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithPopup,
+} from "firebase/auth"
 
 const Register=()=>{
 
+    const [submitting,setSubmitting]=useState(false);
+    const [error,setError]= useState(""); 
+
+    
      const [pwd,setPwd]=React.useState("");
          const [pwdFocused,setPwdFocused]=React.useState(false);
     
          const showHint = pwdFocused || pwd.length>0;
+
+    const onRegister = async(e)=>{
+        e.preventDefault();
+        setError("");
+        setSubmitting(true);
+        try{
+            const form = e.currentTarget;
+            const name = form.name.value;
+    const photoUrl = form.photoUrl.value || "";
+    const email = form.email.value;
+    const password = form.password.value;
+        
+
+        
+    const cred = await createUserWithEmailAndPassword(auth , email , password);
+
+    await updateProfile(cred.user,{displayName: name, photoURL: photoUrl})
+
+    alert("Registration Succesfull!!")
+    } catch(err){
+        setError(err.message || "Registration Failed ")
+    }finally{
+        setSubmitting(false);
+    }
+}
+    const onGoogle = async () => {
+  setError("");
+  setSubmitting(true);
+
+  try {
+    await signInWithPopup(auth, googleProvider);
+    alert("Signed in with Google!");
+    // (optional) navigate to home/profile later
+  } catch (err) {
+    setError(err.message || "Google sign-in failed");
+  } finally {
+    setSubmitting(false);
+  }
+};
+
+
+
+
+   
     return(
        
         <div className="flex justify-center items-center min-h-screen bg-blue-100">
@@ -17,7 +71,7 @@ const Register=()=>{
         <h2 className="text-2xl font-semibold text-[#3b3e3d] ">Register your Account</h2>
 
         
-        <form className="fieldset space-y-3" noValidate>
+        <form className="fieldset space-y-3" noValidate onSubmit={onRegister}>
 
             <label className="label text-[#3b3e3d] font-semibold">Name</label>
             <input
@@ -73,19 +127,32 @@ const Register=()=>{
         
             )}
 
-             <label className="label">
+             <label className="label cursor-pointer justify-start gap-2">
     <input type="checkbox" defaultChecked className="checkbox "  />
     Accept our Terms & Condition
   </label>
-          <button type="submit" className="btn bg-[#3b3e3d] mt-4 text-white">Register</button>
-<p className="text-center font-semibold text-primary py-2">
-       <button type="button" className="btn btn-outline w-full text-[#3b3e3d] mb-3 ">
-                    Sign with Google <FcGoogle />
-                  </button>
-              Already Have An Account? {"  "}
-              <NavLink to="/login"> <span className="text-secondary"> Login</span></NavLink>
-            </p>
-        </form>
+          <button type="submit" className="btn bg-[#3b3e3d] mt-4 text-white" disabled={submitting}>{submitting ? "Registering..." : "Register"}
+  </button>
+ 
+    < button
+    type="button"
+    className="btn btn-outline w-full text-[#3b3e3d] mb-3"
+    onClick={onGoogle}
+    disabled={submitting}
+  >
+    <FcGoogle className="text-xl" /> Sign in with Google
+  </button>
+ 
+ {error && <p className="text-red-600 text-sm">{error}</p>}
+
+  <p className="text-center font-semibold text-primary py-2">
+    Already Have An Account?{" "}
+    <NavLink to="/login" className="text-secondary">
+      Login
+    </NavLink>
+  </p>
+</form>
+
       </div>
        </div>
 
