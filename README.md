@@ -2,7 +2,7 @@
 
 Purpose: Discover indie & popular games, view details, and support developers.
 
-Live URL: https://your-live-link-here.com
+Live URL: https://z-game-hub.netlify.app/
 
 ## Key Features
 -  Email/Password + Google auth (Firebase)
