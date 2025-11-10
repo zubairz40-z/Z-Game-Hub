@@ -43,7 +43,7 @@ const GameDetailsPage =()=>{
   if (!game) return <div className="p-6">Game not found.</div>
 
   return (
-    <div className="bg-blue-200">
+    <div className="bg-blue-100">
         <div className="max-w-6xl mx-auto p-6 ">
            
 
@@ -71,7 +71,7 @@ const GameDetailsPage =()=>{
         </div>
       </div>
  </div>
-      <section className="max-w-6xl mx-auto py-10 ">
+      <section className="max-w-6xl mx-auto md:flex-row py-10 px-10 ">
         <h2 className="text-2xl font-bold mb-4">Popular Games</h2>
         {popular.length === 0 ? (
           <p>No games found.</p>

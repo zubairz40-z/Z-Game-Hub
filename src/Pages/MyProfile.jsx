@@ -15,7 +15,7 @@ const MyProfile=()=>{
         if(!user ) return null;
 
         return(
-            <div className="bg-blue-200 min-h-screen">
+            <div className="bg-blue-100 min-h-screen">
             <div className=" max-w-4xl mx-auto p-10 ">
                 <div className="flex items-center gap-5">
                     <img src={user.photoURL} alt="" className="w-100 h-100 object-cover"/>
@@ -23,7 +23,7 @@ const MyProfile=()=>{
                 <div className="items-center text-left justify-center gap-5">
                 <h2 className="text-2xl m-5">{user.displayName}</h2>
                 <p className="text-2xl m-5">{user.email}</p>
-                < NavLink to="updateprofile" className="btn btn-primary w-full text-xl">Update Info</NavLink>
+                < NavLink to="/updateprofile" className="btn btn-primary w-full text-xl">Update Info</NavLink>
             </div>
           </div>
          

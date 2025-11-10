@@ -10,6 +10,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import Developers from "../Pages/Developer";
 import ForgotPassword from './../Pages/Forgotpassword';
 import MyProfile from "../Pages/MyProfile";
+import UpdateProfile from "../Pages/UpdateProfile";
 
 
 const router = createBrowserRouter([
@@ -53,7 +54,17 @@ const router = createBrowserRouter([
             },
             {
                 path:"/myprofile",
-                element: <MyProfile></MyProfile>
+                element: (
+                     <ProtectedRoute>
+                <MyProfile></MyProfile>
+                </ProtectedRoute>)
+            },
+            {
+                 path:"/updateprofile",
+                element: (
+                     <ProtectedRoute>
+                <UpdateProfile></UpdateProfile>
+                </ProtectedRoute>)
             }
 
         ]

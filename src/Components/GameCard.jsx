@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
+import { motion } from "framer-motion";
 
 
 const GameCard =({game})=>{
@@ -8,8 +9,14 @@ const GameCard =({game})=>{
     
     
 return(
-    <div className="rounded-2xl border bg-white overflow-hidden hover:shadow transition">
-
+    <motion.div
+    initial={{ opacity: 0, y: 12 }}
+    animate={{ opacity: 1, y: 0 }}
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.25 }}
+    className="rounded-2xl border bg-white overflow-hidden hover:shadow"
+  >
+     < NavLink   to={`/games/${game.id}`}>
         <NavLink to={`/games/${game.id}`}>
          <img src={game.coverPhoto} alt={game.title}
          className="w-full h-44 object-cover" />
@@ -18,7 +25,7 @@ return(
 
         <div className="p-4">
             
-            <NavLink className="font-semibold text-xl">{game.title}</NavLink>
+            <NavLink to={`/games/${game.id}`} className="font-semibold text-xl">{game.title}</NavLink>
 
             <p className="text-sm text-gray-600">{game.developer}</p>
 
@@ -35,7 +42,9 @@ return(
           View details
         </NavLink>
         </div>
-    </div>
+
+        </NavLink>
+  </motion.div>
 )
 
 }
