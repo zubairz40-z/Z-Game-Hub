@@ -56,9 +56,7 @@ const Register=()=>{
   } finally {
     setSubmitting(false);
   }
-   console.log("Auth projectId:", auth.app.options.projectId);
-console.log("Auth apiKey:", auth.app.options.apiKey);
-console.log("Current user:", auth.currentUser);
+ 
 };
 
 
