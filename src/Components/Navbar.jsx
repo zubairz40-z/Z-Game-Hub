@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { GiGameConsole } from "react-icons/gi";
 import { NavLink } from 'react-router';
+import { AuthContext } from "../Context/AuthContext";
 
 const Navbar =()=>{
+    const {user ,loading,logout}=useContext(AuthContext)
+
     return(
         <div className="bg-blue-300">
             <div className="navbar  shadow-sm">
@@ -27,13 +30,35 @@ const Navbar =()=>{
     <ul className="menu menu-horizontal px-1">
       <li ><NavLink to="/">Home</NavLink></li>
       
-      <li ><NavLink to="/">Developers</NavLink></li>
+      <li ><NavLink to="/developers">Developers</NavLink></li>
     </ul>
   </div>
-  <div className="navbar-end flex gap-5">
+  <div className="navbar-end flex items-center gap-5">
+    { loading ? (
+        <span className="loading loading-ring loading-xl"></span>
+    ) : user ? (
+        <>
+        <div className="flex items-center"> 
+        <NavLink to="/Myprofile" title={user.displayName || user.email} className="flex items-center gap-2">
+            <img src={user.photoURL} alt="profile" className="w-11 h-11 rounded-full object-cover" />
+
+            <span className="hidden sm:block font-medium mx-auto truncate">
+          {user.displayName || user.email}
+        </span>
+        </NavLink>
+        </div>
+        <button onClick={logout} className="btn ">Logout</button>
+        </>
+        
+    ) : (
+
+        <>
+   
     <NavLink to="/login" className="btn  bg-pink-300 ">Login</NavLink>
 
-    <NavLink  to="/register"  className="btn bg-pink-300 ">Register</NavLink>
+    <NavLink  to="/register"  className="btn bg-pink-300 ">Register</NavLink> 
+    </>
+     )}
   </div>
 </div>
         </div>

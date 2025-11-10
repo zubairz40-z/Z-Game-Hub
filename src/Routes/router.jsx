@@ -1,11 +1,12 @@
 import React from "react";
 import { createBrowserRouter } from "react-router";
-import MainLayout from './../src/Layouts/MainLayout';
-import HomePage from './../src/Pages/HomePage';
-import GameDetailsPage from "../src/Pages/GameDetailsPage";
-import Login from './../src/Pages/Login';
-import Register from './../src/Pages/Register';
-import ErrorPage from "../src/Pages/ErrorPage";
+import MainLayout from '../Layouts/MainLayout';
+import HomePage from '../Pages/HomePage';
+import GameDetailsPage from "../Pages/GameDetailsPage";
+import Login from '../Pages/Login';
+import Register from '../Pages/Register';
+import ErrorPage from "../Pages/ErrorPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 
 const router = createBrowserRouter([
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
             },
             {
                 path:"/games/:id",
-                element:<GameDetailsPage></GameDetailsPage>
+                element:(
+                    <ProtectedRoute>
+                        <GameDetailsPage></GameDetailsPage>
+                    </ProtectedRoute>
+                )
             },
             {
                 path:"/login",

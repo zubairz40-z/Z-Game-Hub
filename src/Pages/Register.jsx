@@ -50,12 +50,15 @@ const Register=()=>{
   try {
     await signInWithPopup(auth, googleProvider);
     alert("Signed in with Google!");
-    // (optional) navigate to home/profile later
+ 
   } catch (err) {
     setError(err.message || "Google sign-in failed");
   } finally {
     setSubmitting(false);
   }
+   console.log("Auth projectId:", auth.app.options.projectId);
+console.log("Auth apiKey:", auth.app.options.apiKey);
+console.log("Current user:", auth.currentUser);
 };
 
 
@@ -134,8 +137,7 @@ const Register=()=>{
           <button type="submit" className="btn bg-[#3b3e3d] mt-4 text-white" disabled={submitting}>{submitting ? "Registering..." : "Register"}
   </button>
  
-    < button
-    type="button"
+    <button type="button"
     className="btn btn-outline w-full text-[#3b3e3d] mb-3"
     onClick={onGoogle}
     disabled={submitting}
@@ -151,6 +153,8 @@ const Register=()=>{
       Login
     </NavLink>
   </p>
+
+   
 </form>
 
       </div>
