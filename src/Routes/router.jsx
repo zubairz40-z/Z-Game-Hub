@@ -8,6 +8,8 @@ import Register from '../Pages/Register';
 import ErrorPage from "../Pages/ErrorPage";
 import ProtectedRoute from "./ProtectedRoute";
 import Developers from "../Pages/Developer";
+import ForgotPassword from './../Pages/Forgotpassword';
+import MyProfile from "../Pages/MyProfile";
 
 
 const router = createBrowserRouter([
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
                 path:"/developers",
                 element: <Developers></Developers>
 
+            },
+            {
+                path:"/forgotpassword",
+                element:<ForgotPassword></ForgotPassword>
+            },
+            {
+                path:"/myprofile",
+                element: <MyProfile></MyProfile>
             }
 
         ]

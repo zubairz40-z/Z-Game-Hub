@@ -9,7 +9,8 @@ const Developers =()=>{
     },[])
 
     return(
-
+     
+        <div className="bg-blue-200">
         <div className="max-w-6xl mx-auto p-10 bg-blue-200">
             <h1 className="text-3xl font-bold mb-4">Featured Developers</h1>
             <p className="text-gray-600">Meet the Creative Teams behind the top AAA titles.</p>
@@ -29,6 +30,7 @@ const Developers =()=>{
           </div>
         ))}
             </div>
+        </div>
         </div>
     )
 

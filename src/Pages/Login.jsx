@@ -3,10 +3,11 @@ import { NavLink } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../Firebase/Firebase.config";
+import useTitle from "../hooks/useTitle";
 
 const Login=()=>{
     
-
+      useTitle("GameHub | Login"); 
 
 
      const [pwd,setPwd]=React.useState("");
