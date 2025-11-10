@@ -13,15 +13,15 @@ const BannerSlider =()=>{
   <div className="hero-content flex flex-wrap gap-4">
     <img
       src="/image.png"
-      className="max-w-[480px] rounded-lg shadow-2xl"
+      className="max-w-[450px] md:max-w-m rounded-lg shadow-2xl"
     />
      <img
       src="/image2.jpg"
-      className=" max-w-[480px] md:max-w-m rounded-lg shadow-2xl"
+      className="max-w-[450px]  md:max-w-m rounded-lg shadow-2xl"
     />
      <img
       src="/image3.jpg"
-      className="max-w-[480px] md:max-w-m rounded-lg shadow-2xl"
+      className="max-w-[450px] md:max-w-m rounded-lg shadow-2xl"
     />
      
     <div>

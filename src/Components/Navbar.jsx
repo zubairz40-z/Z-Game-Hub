@@ -17,11 +17,11 @@ const Navbar =()=>{
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-pink-300 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
+        <li><NavLink to="/">Home</NavLink></li>
         
-        <li><a>Game Details</a></li>
+        <li><NavLink  to="/register">Register</NavLink></li>
 
-        <li><a>Login</a></li>
+        <li><NavLink to="/login">Login</NavLink></li>
       </ul>
     </div>
     <NavLink to="/"className="btn btn-ghost text-xl"><GiGameConsole /> Game Hub</NavLink >
@@ -54,9 +54,9 @@ const Navbar =()=>{
 
         <>
    
-    <NavLink to="/login" className="btn  bg-pink-300 ">Login</NavLink>
+    <NavLink to="/login" className="btn  bg-pink-300  hidden sm:inline-flex">Login</NavLink>
 
-    <NavLink  to="/register"  className="btn bg-pink-300 ">Register</NavLink> 
+    <NavLink  to="/register"  className="btn bg-pink-300 hidden sm:inline-flex">Register</NavLink> 
     </>
      )}
   </div>
