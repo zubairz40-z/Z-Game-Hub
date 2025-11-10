@@ -7,6 +7,7 @@ import Login from '../Pages/Login';
 import Register from '../Pages/Register';
 import ErrorPage from "../Pages/ErrorPage";
 import ProtectedRoute from "./ProtectedRoute";
+import Developers from "../Pages/Developer";
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
                path:"*",
                element:<ErrorPage></ErrorPage>
             
+
+            },{
+                path:"/developers",
+                element: <Developers></Developers>
 
             }
 

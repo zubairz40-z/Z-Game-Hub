@@ -1,22 +1,23 @@
-// src/Pages/GameDetailsPage.jsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { FaStar } from "react-icons/fa";
 import GameCard from "../Components/GameCard";
 
-const GameDetailsPage = () => {
-  const { id } = useParams();
 
-  const [games, setGames] = React.useState([]);
-  const [game, setGame] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
+const GameDetailsPage =()=>{
+    const {id} = useParams();
 
-  // Load all games once
-  React.useEffect(() => {
-    let isMounted = true;
-    setLoading(true);
-    fetch("/gamesdata.json")
-      .then((r) => r.json())
-      .then((list) => {
+    const [games,setGames]= useState([]);
+    const [game,setGame]= useState(null);
+    const [loading,setLoading]=useState(true);
+
+
+    useEffect(()=>{
+        let isMounted = true;
+        setLoading(true);
+        fetch("/gamesdata.json")
+        .then((r)=>r.json())
+          .then((list) => {
         if (!isMounted) return;
         setGames(list || []);
         const found = (list || []).find((g) => String(g.id) === String(id)) || null;
@@ -33,42 +34,44 @@ const GameDetailsPage = () => {
     };
   }, [id]);
 
-  // Top 6 by rating
   const popular = React.useMemo(() => {
     return [...games]
-      .sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings))
-      .slice(0, 6);
+      
   }, [games]);
 
   if (loading) return <div className="p-6">Loading game…</div>;
-  if (!game) return <div className="p-6">Game not found.</div>;
+  if (!game) return <div className="p-6">Game not found.</div>
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <img
-          src={game.coverPhoto}
-          alt={game.title}
-          className="w-full md:w-80 rounded-xl object-cover"
-        />
-        <div>
-          <h1 className="text-3xl font-bold">{game.title}</h1>
-          <p className="mt-2 text-sm opacity-80">
-            {game.developer} • {game.category} • ⭐ {game.ratings}
-          </p>
-          <p className="mt-4">{game.description}</p>
-          <a
+    <div className="bg-blue-200">
+        <div className="max-w-6xl mx-auto p-6 ">
+           
+
+            <div className="flex flex-col md:flex-row gap-6">
+                 <img src={game.coverPhoto} alt={game.title} 
+            className="w-full md:w-80 rounded-xl object-cover"/>
+
+            <div className="items-center">
+                <p className="text-3xl font-bold">{game.title}</p>
+                <p className="text-m text-gray-600 mt-1">{game.developer}</p>
+
+           <div className="flex items-center justify-between mt-3 text-lg">
+          <span className="px-2 py-1 bg-gray-100 rounded-2xl">{game.category}</span>
+          <span>⭐ {game.ratings}</span>
+        </div>
+                <p className="mt-4 text-lg">{game.description}</p>
+                 <a
             href={game.downloadLink}
             target="_blank"
             rel="noreferrer"
-            className="btn btn-primary mt-6"
+            className="btn btn-primary mt-6 px-10"
           >
-            Install / Visit
+            Install 
           </a>
         </div>
       </div>
-
-      <section className="px-1 py-10">
+ </div>
+      <section className="max-w-6xl mx-auto py-10 ">
         <h2 className="text-2xl font-bold mb-4">Popular Games</h2>
         {popular.length === 0 ? (
           <p>No games found.</p>
@@ -80,8 +83,11 @@ const GameDetailsPage = () => {
           </div>
         )}
       </section>
+          
     </div>
-  );
-};
+  )
+        
+    
+}
 
 export default GameDetailsPage;

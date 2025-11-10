@@ -20,7 +20,7 @@ return(
             
             <NavLink className="font-semibold text-xl">{game.title}</NavLink>
 
-            <p className="text-sm text-gray-600 mt-1">{game.developer}</p>
+            <p className="text-sm text-gray-600">{game.developer}</p>
 
            <div className="flex items-center justify-between mt-3 text-sm">
           <span className="px-2 py-1 bg-gray-100 rounded-2xl">{game.category}</span>
